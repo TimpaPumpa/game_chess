@@ -491,7 +491,7 @@ pub mod chess_server
           impl<T : Chess> tonic::server::UnaryService<super::GameId> for pull_game_stateSvc<T>
           {
             type Future = BoxFuture<tonic::Response<Self::Response>, tonic::Status>;
-            type Response = super::GameState;
+            type Response = super::;
 
             fn call(&mut self, request : tonic::Request<super::GameId>) -> Self::Future
             {
